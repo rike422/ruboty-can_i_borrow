@@ -9,7 +9,7 @@ module Ruboty
             return_item
             message.reply("#{item}を返却済みにします。ありがとうございました。")
           else
-            message.reply("#{item}は#{brower_history[:user]}さんによって借りられています。")
+            message.reply("#{item}は#{borrow_history[:user]}さんによって借りられています。")
           end
         end
 
