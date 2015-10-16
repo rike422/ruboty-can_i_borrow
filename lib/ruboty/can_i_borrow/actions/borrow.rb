@@ -2,7 +2,8 @@ module Ruboty
   module CanIBorrow
     module Actions
       class Borrow < Base
-        def call
+
+        def try_borrow
           unless borrowed?
             borrow
             message.reply("#{item}を貸し出し状態にします。")
