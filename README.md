@@ -26,8 +26,12 @@ Or install it yourself as:
 => "itemを貸し出し状態にします。"
 @ruboty borrow to "item"
 => "itemは2015-10-07に{user}さんに貸し出されています。"
+@ruboty list borrowed
+=> "{user}さんが、2015-10-07にitemを借りています。"
 @ruboty return to "item"
 => "itemを返却済みにします。ありがとうございました。"
+@ruboty list borrowed
+=> "現在、誰も借りていません。"
 
 ```
 
