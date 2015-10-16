@@ -9,7 +9,7 @@ describe Ruboty::CanIBorrow::Actions::Return do
       item: "SugeeeItem"
     }
   end
-  describe "#try_return" do
+  describe "#call" do
     let(:borrowed_at) { Date.today }
     let(:user) { "batman" }
     before(:each) do
@@ -26,7 +26,7 @@ describe Ruboty::CanIBorrow::Actions::Return do
         expect(message).to receive(:reply).with(
           "#{item}は借しだされていません。"
         )
-        drscribe_instance.try_return
+        drscribe_instance.call
       end
     end
     context 'is borrower' do
@@ -38,7 +38,7 @@ describe Ruboty::CanIBorrow::Actions::Return do
         expect(message).to receive(:reply).with(
           "#{item}を返却済みにします。ありがとうございました。"
         )
-        drscribe_instance.try_return
+        drscribe_instance.call
       end
     end
     context 'not borrower' do
@@ -49,7 +49,7 @@ describe Ruboty::CanIBorrow::Actions::Return do
       it 'reply message' do
         expect(drscribe_instance).to_not receive(:return_item)
         expect(message).to receive(:reply).with("#{item}は#{user}さんによって借りられています。")
-        drscribe_instance.try_return
+        drscribe_instance.call
       end
     end
   end

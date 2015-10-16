@@ -6,9 +6,18 @@ describe Ruboty::CanIBorrow::Actions::Borrow do
   let(:item) { "SugeeeItem" }
   let(:message) do
     {
-      item: "SugeeeItem"
+      item: "SugeeeItem",
+      from_name: "Batman"
     }
   end
+
+  describe "#booking" do
+    let(:booking_list) { ["Batman"] }
+    before(:each) do
+      allow(drscribe_instance).to receive(:booking_list).and_return(booking_list)
+    end
+  end
+
   describe "#try_borrow" do
     let(:borrowed_at) { Date.today }
     let(:user) { "batman" }

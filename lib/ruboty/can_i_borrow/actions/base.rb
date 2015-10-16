@@ -8,6 +8,11 @@ module Ruboty
           message.robot.brain.data[Ruboty::CanIBorrow::NAME_SPACE] ||= {}
         end
 
+        def booking_list
+          leger[item][:booking_list] ||= []
+        end
+
+
         def borrowed?
           !borrow_history.nil?
         end
@@ -22,6 +27,10 @@ module Ruboty
 
         def item
           message[:item]
+        end
+
+        def from_name
+          message.from_name
         end
       end
     end

@@ -17,7 +17,7 @@ module Ruboty
         end
 
         def borrow_histories
-          leager.select{|k, v| v != nil }
+          leager.select { |k, v| v.nil? }
         end
       end
     end
