@@ -2,7 +2,7 @@ module Ruboty
   module CanIBorrow
     module Actions
       class Return < Base
-        def call
+        def try_return
           return message.reply("#{message[:item]}は借しだされていません。") if borrow_history.nil?
 
           if borrower?
