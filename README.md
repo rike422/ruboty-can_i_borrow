@@ -1,4 +1,4 @@
-# Ruboty::CanIBorrow
+# Ruboty::CanIBorrow  [![Build Status](https://travis-ci.org/rike422/ruboty-can_i_borrow.svg?branch=master)](https://travis-ci.org/rike422/ruboty-can_i_borrow)
 
 Logging lending record and check lending status
 
